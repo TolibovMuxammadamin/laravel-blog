@@ -27,9 +27,9 @@ class PostsController extends Controller
     public function tag(Tag $tag)
     {
         return view('blog.tag')
-        ->with('tag', $tag)
-        ->with('posts', $tag->posts()->searched()->simplePaginate(3))
-        ->with('tags', Tag::all())
-        ->with('categories', Category::all());
+            ->with('tag', $tag)
+            ->with('posts', $tag->posts()->searched()->simplePaginate(3))
+            ->with('tags', Tag::all())
+            ->with('categories', Category::all());
     }
 }
